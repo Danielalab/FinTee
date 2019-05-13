@@ -1,17 +1,21 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-// import { withStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom'
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import PeopleIcon from '@material-ui/icons/People';
+import MoneyIcon from '@material-ui/icons/AttachMoney';
+import QuestionIcon from '@material-ui/icons/QuestionAnswer';
+import PersonIcon from '@material-ui/icons/PersonPin';
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
+import { LOGIN_PATH, SIGNUP_PATH, FAQ_PATH, ABOUT_PATH } from 'constants/paths'
+
 
 const styles = () => ({
   list: {
@@ -41,43 +45,22 @@ function SwipeableTemporaryDrawer() {
   const sideList = (
     <div className={classes.list}>
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-    </div>
-  );
-
-  const fullList = (
-    <div className={classes.fullList}>
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+        <ListItem button component={Link} to={FAQ_PATH}>
+          <ListItemIcon><PeopleIcon /></ListItemIcon>
+          <ListItemText primary='Mentoring' />
+        </ListItem>
+        <ListItem button component={Link} to={SIGNUP_PATH}>
+          <ListItemIcon><MoneyIcon /></ListItemIcon>
+          <ListItemText primary='Financing' />
+        </ListItem>
+        <ListItem button component={Link} to={FAQ_PATH}>
+          <ListItemIcon><QuestionIcon /></ListItemIcon>
+          <ListItemText primary='FAQ' />
+        </ListItem>
+        <ListItem button component={Link} to={SIGNUP_PATH}>
+          <ListItemIcon><MoneyIcon /></ListItemIcon>
+          <ListItemText primary='Financing' />
+        </ListItem>
       </List>
     </div>
   );
@@ -85,12 +68,12 @@ function SwipeableTemporaryDrawer() {
   return (
     <div>
       <IconButton
-            className={classes.menuIcon}
-            aria-label="open drawer"
-            onClick={toggleDrawer('left', true)}
-          >
-            <MenuIcon style={{color: 'fff'}}/>
-          </IconButton>
+        className={classes.menuIcon}
+        aria-label="open drawer"
+        onClick={toggleDrawer('left', true)}
+      >
+        <MenuIcon style={{color: 'fff'}}/>
+      </IconButton>
       <SwipeableDrawer
         open={state.left}
         onClose={toggleDrawer('left', false)}

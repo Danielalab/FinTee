@@ -47,13 +47,14 @@ function Navbar({
             anchorEl={anchorEl}
           />
         ) : (
-          <LoginMenu />
+          <p>No sabemos here</p>
         )}
       </Toolbar>
     </AppBar>
   )
 }
 
+ // <LoginMenu />
 Navbar.propTypes = {
   classes: PropTypes.object.isRequired, // from enhancer (withStyles)
   displayName: PropTypes.string, // from enhancer (flattenProps - profile)

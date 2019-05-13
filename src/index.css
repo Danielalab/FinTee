@@ -23,3 +23,40 @@
   /* [type=button]{
     -webkit-appearance: none !important;
   } */
+
+body {
+  background: #f8f8f8;
+}
+
+/* HOME */
+
+.title-logo {
+  font-family: 'Lobster', cursive;
+  color: #A64D78;
+}
+
+.btn-primary {
+  background: #f8d966;
+  color: #000000;
+  border: 1px solid #f8d966;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:hover {
+  background: #f8d966;
+  color: #000000;
+  border: 5px solid #FAE599
+}
+
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem #FAE599;
+  
+}
+
+.vh-80 {
+  height: 80vh;
+}
+
+.maxh-40vh {
+  max-height: 30vh;
+}
