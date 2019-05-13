@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import {
   ACCOUNT_PATH,
@@ -7,136 +6,27 @@ import {
   LOGIN_PATH,
   SIGNUP_PATH
 } from 'constants/paths'
-import Typography from '@material-ui/core/Typography';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import Grid from '@material-ui/core/Grid';
-import Avatar from '@material-ui/core/Avatar';
-import RecipeReviewCard from './card';
-import defaultEmpatiaImageUrl from 'static/empatia.png'
-import networkingImage from 'static/networking.png'
-import profesionalImage from 'static/profesional.png'
-import socialImage from 'static/social-care.png'
-import sororityImage from 'static/sorority.jpg'
-import mentorImage from 'static/me.jpg'
 
-function Home({ classes }) {
+import logo from '../../../../static/logo.png'
+
+function Home() {
   return (
-    <div className={classes.root}>
-      <div className="flex-row-center">
-        {/* <div className={classes.sizeImage}>
-          <img  className={classes.image} src={sororityImage} />
-        </div> */}
-        <div>
-          <Typography component="h2" variant="h1" gutterBottom>
-            SORORITY
-          </Typography>
-          <Typography component="h2" variant="h4" gutterBottom>
-            Creciendo juntas
-          </Typography>
-        </div>
+    <section className="d-flex justify-content-center flex-column mx-4 vh-80">
+      <div className="d-flex justify-content-center flex-column">
+        <figure className="d-flex justify-content-center rounded-circle">
+          <img src={logo} className="img-fluid maxh-40vh rounded-circle" alt="fintee-logo"></img>
+        </figure>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis enim blanditiis
+          voluptatibus rem commodi dolorum maxime, modi adipisci! Iusto cum totam maxime?</p>
       </div>
-      <div className="flex-row-center">
-        <div className={classes.section}>
-          <p>
-            Plataforma que conecta a más mujeres para compartir conocimientos,
-            experiencia y habilidades con el fin de acelerar el proceso de
-            crecimiento que les permita mayor realización y progreso profesionales.
-          </p>
-        </div>
-
-        <div className={classes.section}>
-          <h1>WE LEAD. WE GROW.  WE TRANSFORM.</h1>
-        </div>
-
-        <div className={classes.section}>
-          <Grid container spacing={24} className={classes.grid}>
-            <Grid item xs={6}>
-              <RecipeReviewCard />
-            </Grid>
-            <Grid item xs={6}>
-              <RecipeReviewCard />
-            </Grid>
-          </Grid>
-        </div>
-
-        <div className={classes.section}>
-          <div className={classes.section}>
-            <h1>NUESTROS VALORES</h1>
-          </div>
-          <Grid container spacing={24} className={classes.grid}>
-            <Grid item xs={4}>
-              <RecipeReviewCard
-                src={profesionalImage}
-                name='Profesionalismo'
-              />
-            </Grid>
-            <Grid item xs={4}>
-              <RecipeReviewCard
-                src={socialImage}
-                name='Sororidad'
-              />
-            </Grid>
-            <Grid item xs={4}>
-              <RecipeReviewCard
-                src={defaultEmpatiaImageUrl}
-                name='Pasión'
-              />
-            </Grid>
-            <Grid item xs={4}>
-              <RecipeReviewCard
-                src={defaultEmpatiaImageUrl}
-                name='Empatía'
-              />
-            </Grid>
-            <Grid item xs={4}>
-              <RecipeReviewCard
-                src={networkingImage}
-                name='Colaborción'
-              />
-            </Grid>
-            <Grid item xs={4}>
-              <RecipeReviewCard
-                src={defaultEmpatiaImageUrl}
-                name='Corage'
-              />
-            </Grid>
-          </Grid>
-        </div>
-        <div className={classes.footer}>
-          <ListItem className={classes.list}>
-            <ListItemIcon>
-              <Avatar>S</Avatar>
-            </ListItemIcon>
-            <ListItemText primary="Sorority" />
-          </ListItem>
-          <ListItem className={classes.list}>
-            <ListItemIcon>
-              <Avatar>f</Avatar>
-            </ListItemIcon>
-            <ListItemText primary="Facebook" />
-          </ListItem>
-          <ListItem className={classes.list}>
-            <ListItemIcon>
-              <Avatar>in</Avatar>
-            </ListItemIcon>
-            <ListItemText primary="Linkedin" />
-          </ListItem>
-          <ListItem className={classes.list}>
-            <ListItemIcon>
-              <Avatar>t</Avatar>
-            </ListItemIcon>
-            <ListItemText primary="twitter" />
-          </ListItem>
-        </div>
+      <div className="d-flex justify-content-center flex-column">
+        <button type="button" className="btn btn-primary btn-lg btn-block">Mentoring</button>
+        <button type="button" className="btn btn-primary btn-lg btn-block">Financing</button>
       </div>
-    </div>
+    </section>
   )
 }
 
-Home.proptypes = {
-  classes: PropTypes.object.isRequired // from enhancer (withStyles)
-}
 
-export default Home
+
+export default Home;
