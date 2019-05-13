@@ -1,7 +1,7 @@
 export default theme => ({
-  root: {
-    ...theme.flexColumnCenter
-  },
+  // root: {
+  //   ...theme.flexColumnCenter
+  // },
   section: {
     ...theme.flexColumnCenter
   },

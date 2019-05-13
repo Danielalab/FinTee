@@ -30,19 +30,17 @@ function Home({ classes }) {
         </div> */}
         <div>
           <Typography component="h2" variant="h1" gutterBottom>
-            SORORITY
+              Fintee
           </Typography>
           <Typography component="h2" variant="h4" gutterBottom>
-            Creciendo juntas
+            Creciendo juntas rseremos masss \:)
           </Typography>
         </div>
       </div>
       <div className="flex-row-center">
         <div className={classes.section}>
           <p>
-            Plataforma que conecta a más mujeres para compartir conocimientos,
-            experiencia y habilidades con el fin de acelerar el proceso de
-            crecimiento que les permita mayor realización y progreso profesionales.
+            Loren immmmmm................
           </p>
         </div>
 
@@ -105,7 +103,7 @@ function Home({ classes }) {
           </Grid>
         </div>
         <div className={classes.footer}>
-          <ListItem className={classes.list}>
+          {/* <ListItem className={classes.list}>
             <ListItemIcon>
               <Avatar>S</Avatar>
             </ListItemIcon>
@@ -123,12 +121,12 @@ function Home({ classes }) {
             </ListItemIcon>
             <ListItemText primary="Linkedin" />
           </ListItem>
-          <ListItem className={classes.list}>
-            <ListItemIcon>
+          <ListItem className={classes.list}> */}
+            {/* <ListItemIcon>
               <Avatar>t</Avatar>
             </ListItemIcon>
             <ListItemText primary="twitter" />
-          </ListItem>
+          </ListItem> */}
         </div>
       </div>
     </div>

@@ -4,9 +4,12 @@ import { Link } from 'react-router-dom'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
+import MenuIcon from '@material-ui/icons/Menu';
+import IconButton from '@material-ui/core/IconButton';
 import { LIST_PATH } from 'constants/paths'
 import AccountMenu from './AccountMenu'
 import LoginMenu from './LoginMenu'
+import SwipeableTemporaryDrawer from './LeftDrawer';
 
 function Navbar({
   avatarUrl,
@@ -22,13 +25,16 @@ function Navbar({
   return (
     <AppBar position="static">
       <Toolbar>
+        <div>
+          <SwipeableTemporaryDrawer />
+        </div>
         <Typography
           variant="h6"
           color="inherit"
           className={classes.flex}
           component={Link}
           to={authExists ? LIST_PATH : '/'}>
-          Sorority
+          FINTEE
         </Typography>
         {authExists ? (
           <AccountMenu
