@@ -1,5 +1,12 @@
 import React from 'react';
-import img from '../../../static/networking.png'
+import img from '../../../../static/networking.png';
+import { withStyles } from '@material-ui/core/styles'
+
+const styles = () => ({
+  list: {
+    width: 250,
+  },
+});
 
 function MentoringPage() {
   return(
@@ -12,7 +19,7 @@ function MentoringPage() {
           <span className="title-logo">FinTee</span>
           <span className="title title-yellow"> + Mentoring</span>
         </h2>
-        <p className="text-center">FinTee allows you to connect women entrepreneurs with a volunteer mentor depending 
+        <p className="text-center">FinTee allows you to connect women entrepreneurs with a volunteer mentor depending
         on the skills you want to develop for your business.</p>
       </div>
       <div className="d-flex justify-content-center flex-column">
@@ -23,4 +30,4 @@ function MentoringPage() {
   )
 }
 
-export default MentoringPage;
+export default withStyles(styles)(MentoringPage);

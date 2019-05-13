@@ -14,7 +14,7 @@ import QuestionIcon from '@material-ui/icons/QuestionAnswer';
 import PersonIcon from '@material-ui/icons/PersonPin';
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
-import { LOGIN_PATH, SIGNUP_PATH, FAQ_PATH, ABOUT_PATH } from 'constants/paths'
+import { MENTORING_PATH, LOGIN_PATH, SIGNUP_PATH, FAQ_PATH, ABOUT_PATH } from 'constants/paths'
 
 
 const styles = () => ({
@@ -45,7 +45,7 @@ function SwipeableTemporaryDrawer() {
   const sideList = (
     <div className={classes.list}>
       <List>
-        <ListItem button component={Link} to={FAQ_PATH}>
+        <ListItem button component={Link} to={MENTORING_PATH}>
           <ListItemIcon><PeopleIcon /></ListItemIcon>
           <ListItemText primary='Mentoring' />
         </ListItem>

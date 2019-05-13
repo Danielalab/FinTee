@@ -9,9 +9,9 @@ import {
 
 import logo from '../../../../static/logo.png'
 // probando vistas
-import MentoringPage from 'routes/Mentoring/components/MentoringPage';
-import MenteePage from 'routes/Mentoring/components/menteePage/MenteePage';
-import MentorPage from 'routes/Mentoring/components/mentorPage/MentorPage';
+import MentoringPage from 'routes/Mentoring/components/MentoringPage/MentoringPage';
+import MenteePage from 'routes/Mentoring/components/MentoringPage/menteePage/MenteePage';
+import MentorPage from 'routes/Mentoring/components/MentoringPage/mentorPage/MentorPage';
 import FinancingPage from 'routes/Financing/FinancingPage';
 
 function Home() {
