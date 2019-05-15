@@ -29,12 +29,13 @@ function Navbar({
           <SwipeableTemporaryDrawer />
         </div>
         <Typography
-          variant="h6"
-          color="inherit"
-          className={classes.flex}
+          variant="title"
+          className="title-logo"
           component={Link}
           to={authExists ? LIST_PATH : '/'}>
-          FINTEE
+          <h2 className="text-center mb-2">
+            <span className="title-logo">FinTee</span>
+          </h2>
         </Typography>
         {authExists ? (
           <AccountMenu
