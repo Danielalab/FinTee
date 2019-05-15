@@ -43,6 +43,16 @@ body {
   border: 1px solid #689F38;
 }
 
+.btn-next {
+  background-color: #A64D78;
+  color: #ffffff;
+}
+
+.btn-next:hover {
+  color: #ffffff;
+  border: 3.5px solid #c79ab0
+}
+
 .vh-80 {
   height: 80vh;
 }
