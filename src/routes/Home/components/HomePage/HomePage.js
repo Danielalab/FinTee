@@ -15,11 +15,22 @@ import MentorPage from 'routes/Mentoring/components/MentoringPage/mentorPage/Men
 import FinancingPage from 'routes/Financing/components/FinancingPage/FinancingPage';
 
 function Home() {
-  return (<p>AQUI VA HOME</p>
-    // <FinancingPage />
-    // <MentorPage />
-    // <MenteePage />
-    // <MentoringPage />
+  return (
+    <section className="d-flex justify-content-center flex-column m-4">
+      <div className="d-flex justify-content-center flex-column mt-2 mb-3">
+        <figure className="d-flex justify-content-center rounded-circle">
+          <img src={logo} className="img-fluid maxh-40vh rounded-circle" alt="women"></img>
+        </figure>
+        <p className="text-center">It is a platform that allows women entrepreneurs (SMEs) 
+        to connect with mentors from different fields to enhance their technical and soft skills,
+        in addition to connecting them with fintechs from the region to access credit in 
+        a 100% digital experience.</p>
+      </div>
+      <div className="d-flex justify-content-center flex-column">
+        <button type="button" className="btn btn-next btn-lg btn-block">Mentoring</button>
+        <button type="button" className="btn btn-next btn-lg btn-block">Financing</button>
+      </div>
+    </section>
   )
 }
 

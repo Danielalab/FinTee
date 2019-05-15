@@ -2,31 +2,31 @@ import React from 'react';
 
 export const skillsMentoring = [
   {
-    nameSkill: '',
+    nameSkill: 'Administration',
     id: '1',
   },
   {
-    nameSkill: '',
+    nameSkill: 'Accounting and Finance',
     id: '2',
   },
   {
-    nameSkill: '',
+    nameSkill: 'Sales',
     id: '3',
   },
   {
-    nameSkill: '',
+    nameSkill: 'Sustainability',
     id: '4',
   },
   {
-    nameSkill: '',
+    nameSkill: 'Financial planning',
     id: '5',
   },
   {
-    nameSkill: '',
+    nameSkill: 'Leadership and communication',
     id: '6',
   },
   {
-    nameSkill: '',
+    nameSkill: 'Public speaking',
     id: '7',
   }
 ]
@@ -75,7 +75,7 @@ function MenteePage() {
                 return(
                 <div key={skill.id}>
                   <input type="checkbox" className="custom-control-input" id={skill.id}/>
-                  <label className="custom-control-label" htmlFor={skill.id}>Check this custom checkbox</label>
+                  <label className="custom-control-label" htmlFor={skill.id}>{ skill.nameSkill }</label>
                 </div>)
               })
             }
