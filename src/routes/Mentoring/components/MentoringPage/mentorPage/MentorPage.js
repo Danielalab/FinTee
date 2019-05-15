@@ -1,5 +1,6 @@
 import React from 'react';
 import { skillsMentoring, areas} from '../utils.js'
+import { countries } from 'countries-apec.js';
 
 function MentorPage() {
   return(
@@ -22,7 +23,7 @@ function MentorPage() {
         <div class="form-group">
           <select id="country" class="form-control">
             <option selected>Select your country</option>
-            <option>...</option>
+            { countries.map(country => <option key={country.id}>{ country.name }</option>) }
           </select>
         </div>
         <div className="form-group">

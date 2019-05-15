@@ -22,7 +22,7 @@ function MenteePage() {
         <div className="form-group">
           <select id="country" className="form-control">
             <option selected>Select your country</option>
-            <option>...</option>
+            { countries.map(country => <option key={country.id}>{ country.name }</option>) }
           </select>
         </div>
         <div className="form-group">

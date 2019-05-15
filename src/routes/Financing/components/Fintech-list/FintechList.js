@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../../../../static/money.png'
+import { countries } from 'countries-apec';
 
 function FintechsList() {
   return(
@@ -12,6 +12,7 @@ function FintechsList() {
         <div className="form-group">
           <select id="country" className="form-control">
             <option selected>Select your country</option>
+            { countries.map(country => <option key={country.id}>{ country.name }</option>) }
           </select>
         </div>
       </form>
