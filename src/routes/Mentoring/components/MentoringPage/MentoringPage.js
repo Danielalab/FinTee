@@ -1,6 +1,6 @@
 import React from 'react';
 import img from '../../../../static/networking.png';
-import textMentoring from '../../../../static/mentor.png';
+// import textMentoring from '../../../../static/mentor.png';
 import { withStyles } from '@material-ui/core/styles'
 
 const styles = () => ({
