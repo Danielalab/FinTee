@@ -1,35 +1,5 @@
 import React from 'react';
-
-export const skillsMentoring = [
-  {
-    nameSkill: 'Administration',
-    id: '1',
-  },
-  {
-    nameSkill: 'Accounting and Finance',
-    id: '2',
-  },
-  {
-    nameSkill: 'Sales',
-    id: '3',
-  },
-  {
-    nameSkill: 'Sustainability',
-    id: '4',
-  },
-  {
-    nameSkill: 'Financial planning',
-    id: '5',
-  },
-  {
-    nameSkill: 'Leadership and communication',
-    id: '6',
-  },
-  {
-    nameSkill: 'Public speaking',
-    id: '7',
-  }
-]
+import { skillsMentoring, areas } from "../utils.js";
 
 function MenteePage() {
   return(
@@ -57,15 +27,21 @@ function MenteePage() {
         </div>
         <div className="form-group">
           <input className="form-control" id="business-name" name="business-name" type="text"
+            placeholder="Linkedin URL"/>
+        </div>
+        <div className="form-group">
+          <input className="form-control" id="business-name" name="business-name" type="text"
             placeholder="Business Name"/>
+        </div>
+        <div className="form-group">
+          <select id="country" className="form-control">
+            <option selected>Select your industry</option>
+            { areas.map(area => <option key={area.id}>{ area.name }</option>) }
+          </select>
         </div>
         <div className="form-group">
           <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"
             placeholder="Business Description"></textarea>
-        </div>
-        <div className="form-group">
-          <input className="form-control" id="business-name" name="business-name" type="text"
-            placeholder="Linkedin URL"/>
         </div>
         <div className="form-group mb-3">
           <p>Select the skills you want to develop:</p>

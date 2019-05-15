@@ -1,5 +1,5 @@
 import React from 'react';
-import { skillsMentoring } from '../menteePage/MenteePage'
+import { skillsMentoring, areas} from '../utils.js'
 
 function MentorPage() {
   return(
@@ -26,12 +26,18 @@ function MentorPage() {
           </select>
         </div>
         <div className="form-group">
+          <input className="form-control" id="business-name" name="business-name" type="text"
+            placeholder="Linkedin URL"/>
+        </div>
+        <div className="form-group">
           <input className="form-control" id="business-name" name="company-name" type="text"
             placeholder="Company Name"/>
         </div>
-        <div className="form-group">
-          <input className="form-control" id="business-name" name="business-name" type="text"
-            placeholder="Linkedin URL"/>
+        <div class="form-group">
+          <select id="areas" class="form-control">
+            <option selected>Select the industry in which you would like to advise.</option>
+            { areas.map(area => <option key={area.id}>{ area.name }</option>) }
+          </select>
         </div>
         <div className="form-group mb-3">
           <p>Select the skills you would like to develop with your mentee:</p>
@@ -41,7 +47,7 @@ function MentorPage() {
                 return(
                 <div key={skill.id}>
                   <input type="checkbox" className="custom-control-input" id={skill.id}/>
-                  <label className="custom-control-label" htmlFor={skill.id}>Check this custom checkbox</label>
+                  <label className="custom-control-label" htmlFor={skill.id}>{skill.nameSkill}</label>
                 </div>)
               })
             }
