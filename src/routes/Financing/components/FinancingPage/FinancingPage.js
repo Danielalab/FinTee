@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../../static/money.png'
+import img from '../../../../static/money.png'
 
 function FinancingPage() {
   return(

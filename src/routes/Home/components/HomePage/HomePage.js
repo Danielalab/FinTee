@@ -12,12 +12,11 @@ import logo from '../../../../static/logo.png'
 import MentoringPage from 'routes/Mentoring/components/MentoringPage/MentoringPage';
 import MenteePage from 'routes/Mentoring/components/MentoringPage/menteePage/MenteePage';
 import MentorPage from 'routes/Mentoring/components/MentoringPage/mentorPage/MentorPage';
-import FinancingPage from 'routes/Financing/FinancingPage';
+import FinancingPage from 'routes/Financing/components/FinancingPage/FinancingPage';
 
 function Home() {
-  return (
-
-    <FinancingPage />
+  return (<p>AQUI VA HOME</p>
+    // <FinancingPage />
     // <MentorPage />
     // <MenteePage />
     // <MentoringPage />
