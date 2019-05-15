@@ -60,3 +60,7 @@ body {
 .maxh-40vh {
   max-height: 25vh;
 }
+
+.logo {
+  height: 33vh;
+}
