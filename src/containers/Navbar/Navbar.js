@@ -48,7 +48,7 @@ function Navbar({
             anchorEl={anchorEl}
           />
         ) : (
-          <p>No sabemos here</p>
+          <p>:)</p>
         )}
       </Toolbar>
     </AppBar>

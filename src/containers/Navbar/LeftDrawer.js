@@ -10,9 +10,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import PeopleIcon from '@material-ui/icons/People';
 import MoneyIcon from '@material-ui/icons/AttachMoney';
-import QuestionIcon from '@material-ui/icons/QuestionAnswer';
-import PersonIcon from '@material-ui/icons/PersonPin';
 import MenuIcon from '@material-ui/icons/Menu';
+import PersonIcon from '@material-ui/icons/Person';
 import IconButton from '@material-ui/core/IconButton';
 import { FINANCING_PATH, MENTORING_PATH, LOGIN_PATH, SIGNUP_PATH, FAQ_PATH, ABOUT_PATH } from 'constants/paths'
 
@@ -53,12 +52,14 @@ function SwipeableTemporaryDrawer() {
           <ListItemIcon><MoneyIcon /></ListItemIcon>
           <ListItemText primary='Financing' />
         </ListItem>
-        <ListItem button component={Link} to={FAQ_PATH}>
+        {/* <ListItem button component={Link} to={FAQ_PATH}>
           <ListItemIcon><QuestionIcon /></ListItemIcon>
           <ListItemText primary='Login' />
-        </ListItem>
-        <ListItem button component={Link} to={SIGNUP_PATH}>
-          <ListItemIcon><MoneyIcon /></ListItemIcon>
+        </ListItem> */}
+        <ListItem button component={Link} to={LOGIN_PATH}>
+          <ListItemIcon>
+            <PersonIcon />
+          </ListItemIcon>
           <ListItemText primary='Login' />
         </ListItem>
       </List>
