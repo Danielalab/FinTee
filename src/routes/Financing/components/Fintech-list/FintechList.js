@@ -20,7 +20,9 @@ class FintechsList extends React.Component() {
   };
 
   handleSelectCountry = (country) => {
-    this.fetchData(country);
+    console.log(country);
+    
+    // this.fetchData(country);
   }
 
   render() {
@@ -32,13 +34,13 @@ class FintechsList extends React.Component() {
         </p>
         <form className="form" name="formLogin" role="form">
           <div className="form-group">
-            <select onChange={(e) => { handleSelectCountry(e.target.value) }} id="country" className="form-control">
+            <select onChange={(e) => { this.handleSelectCountry(e.target.value) }} id="country" className="form-control">
               <option selected >Select your country</option>
               { countries.map(country => <option key={country.id}  value={country.name}>{ country.name }</option>) }
             </select>
           </div>
         </form>
-        { data ? 'hola' : '' }
+        { this.state.data ? 'hola' : '' }
         <ul>
           <li>lista de fintechs</li>
         </ul>

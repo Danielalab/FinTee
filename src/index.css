@@ -44,6 +44,7 @@ body {
 }
 
 .btn-next {
+  margin: 1px;
   background-color: #A64D78;
   color: #ffffff;
 }
