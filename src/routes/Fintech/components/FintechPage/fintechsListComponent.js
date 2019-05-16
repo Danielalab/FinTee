@@ -1,6 +1,6 @@
 import React from 'react';
 import { countries } from 'countries-apec';
-import { fintechsList } from 'routes/Financing/fintechs';
+import { businessList } from 'routes/Financing/fintechs';
 import { withStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -32,7 +32,7 @@ const styles = {
   }
 };
 
-function FintechItem(fintechData, classes) {
+function BusinessItem(businessData, classes) {
   return(
     <Card className={classes.card}>
       <CardActionArea>
@@ -41,21 +41,21 @@ function FintechItem(fintechData, classes) {
           alt="Contemplative Reptile"
           className={classes.media}
           height="140"
-          image={ fintechData.img }
+          image={ businessData.img }
           title="Contemplative Reptile"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            { fintechData.nameFintech }
+          <Typography gutterBottom variant="h5" style={{ fontWeight: 700 }}>
+            S/. {businessData.amount}
           </Typography>
           <Typography component="p">
-            { fintechData.sumary }
+            { businessData.reason }
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         <a  target="_blank"
-          href={ fintechData.webURL }
+          href={ businessData.linkedin}
         >
         <Button className={classes.button} >
           Ask for a loan
@@ -66,16 +66,18 @@ function FintechItem(fintechData, classes) {
   )
 }
 
-class FintechsListComponent extends React.Component {
+class BusinessListComponent extends React.Component {
   state = {
     data: []
   }
   handleSelectCountry = (countryName) => {
     this.setState({ data: [] })
-    const dataCountry = fintechsList.filter((fintech) => fintech.country === countryName)
+    const dataCountry = businessList.filter((fintech) => fintech.country === countryName)
     this.setState({ data: dataCountry })
   }
   render() {
+    console.log(" Bravo llegaste  hasta here")
+    console.log(businessList)
     return(
       <div>
         <form className="form" name="formLogin" role="form">
@@ -87,10 +89,10 @@ class FintechsListComponent extends React.Component {
           </div>
         </form>
         <List className={this.props.classes.root}>
-          { this.state.data.map(fintech => {
+          { this.state.data.map(business => {
             return (
-              <ListItem className="my-2" key={ fintech.id }>
-                {FintechItem(fintech, this.props.classes)}
+              <ListItem className="my-2" key={ business.id }>
+                {BusinessItem(business, this.props.classes)}
               </ListItem>
             )
           }) }
@@ -100,4 +102,4 @@ class FintechsListComponent extends React.Component {
   }
 }
 
-export default withStyles(styles)(FintechsListComponent);
+export default withStyles(styles)(BusinessListComponent);

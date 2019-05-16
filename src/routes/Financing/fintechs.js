@@ -29,7 +29,7 @@ export const fintechsList = [
     "img": "https://kontigo.pe/static/media/logo.c18facfe.png",
     "country": "Peru",
     "id": 4,
-    "sumary": ""
+    "sumary": "Web platform that connects people who require a loan with financial institutions in a 100% online environment."
   },
   {
     "nameFintech": "Tienda Pago",
@@ -37,7 +37,7 @@ export const fintechsList = [
     "img": "https://www.tiendapago.com/imagenes/logo.svg",
     "country": "Peru",
     "id": 5,
-    "sumary": ""
+    "sumary": "Tienda Pago offers you a purchase solution that gives you up to $ 10,000.00 a week for your purchase of merchandise with our allied distributors. Increase your inventory and assortment to achieve greater profits. ",
   },
   {
     "nameFintech": "TAPPOYO",
@@ -120,23 +120,28 @@ export const businessList = [
     "img": "http://perupymes.com/pymes/img/94e792_rgYYLPwf_400x400.jpeg",
     "country": "Peru",
     "amount": 1500,
+    "coin": "Soles",
     "linkedin": "https://www.linkedin.com/in/danielagonzalesbejar/",
-    "id": 1
+    "id": 1,
+    "reason": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
   },
   {
     "name": "Simones Catering",
     "img": "http://perupymes.com/pymes/img/b7c9eb_Logo SIMONES_2018.png",
     "country": "Peru",
     "amount": 2000,
+    "coin": "Soles",
     "linkedin": "https://www.linkedin.com/in/maricarmenrojastinco/",
-    "id": 2
+    "id": 2, "reason": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
   },
   {
     "name": "Allpachu Alpaca",
     "img": "http://perupymes.com/pymes/img/4319b0_FB_IMG_14770054110914665.jpg",
     "country": "Peru",
+    "coin": "Soles",
     "amount": 1000,
     "linkedin": "https://www.linkedin.com/in/maricarmenrojastinco/",
-    "id": 3
+    "id": 3,
+    "reason": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
   }
 ]

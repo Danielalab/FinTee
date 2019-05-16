@@ -76,7 +76,7 @@ function MenteePage({ classes }) {
           <Button
             type="button"
             className={classes.button}
-            omponent={Link} to={MENTORLIST_PATH}
+            component={Link} to={MENTORLIST_PATH}
           >
             Find a Mentor
           </Button>

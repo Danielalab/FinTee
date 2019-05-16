@@ -43,9 +43,7 @@ function Navbar({
             handleMenu={handleMenu}
             anchorEl={anchorEl}
           />
-        ) : (
-          <p>:)</p>
-        )}
+        ) : ( false )}
       </Toolbar>
     </AppBar>
   )
