@@ -14,7 +14,7 @@ function ProjectPage({ project, projectId, classes }) {
           </Typography>
           <Typography className={classes.subtitle}>{projectId}</Typography>
           <div style={{ marginTop: '10rem' }}>
-            <pre>{JSON.stringify(project, null, 2)}</pre>
+            {/* <pre>{JSON.stringify(project, null, 2)}</pre> */}
           </div>
         </CardContent>
       </Card>

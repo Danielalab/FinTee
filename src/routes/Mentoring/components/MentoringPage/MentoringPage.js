@@ -1,7 +1,8 @@
 import React from 'react';
 import img from '../../../../static/networking.png';
-// import textMentoring from '../../../../static/mentor.png';
-import { withStyles } from '@material-ui/core/styles'
+import { withStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
+// import { LOGIN_PATH, SIGNUP_PATH, FAQ_PATH, ABOUT_PATH } from 'constants/paths'
 
 const styles = () => ({
   list: {
@@ -20,12 +21,28 @@ function MentoringPage() {
           <span className="title-logo">FinTee</span>
           <span className="title title-yellow"> + Mentoring</span>
         </h2>
-        <p className="text-center">FinTee allows you to connect women entrepreneurs with a volunteer mentor depending
-        on the skills you want to develop for your business.</p>
+        <p className="text-center">
+          FinTee allows you to connect women entrepreneurs with a volunteer mentor depending
+          on the skills you want to develop for your business.
+        </p>
       </div>
       <div className="d-flex justify-content-center flex-column">
-        <button type="button" className="btn btn-success btn-lg btn-block">I'm a Mentor</button>
-        <button type="button" className="btn btn-outline-success btn-lg btn-block">I'm a Mentee</button>
+        <button
+          type="button"
+          className="btn btn-success btn-lg btn-block"
+          // onSubmit={goToMentor}
+          // component={Link} to={MENTOR_PATH}
+        >
+          I'm a Mentor
+        </button>
+        <button
+          type="button"
+          className="btn btn-outline-success btn-lg btn-block"
+          // onSubmit={goToMentee}
+          // component={Link} to={MENTEE_PATH}
+        >
+          I'm a Mentee
+        </button>
       </div>
     </section>
   )

@@ -1,4 +1,6 @@
 import NewProjectTile from './NewProjectTile'
-import enhance from './NewProjectTile.enhancer'
+// import enhance from './NewProjectTile.enhancer'
 
-export default enhance(NewProjectTile)
+// export default enhance(NewProjectTile)
+
+export default NewProjectTile;
