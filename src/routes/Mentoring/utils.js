@@ -98,7 +98,7 @@ export const areas = [
 
 export const mentorsList = [
   {
-    name: 'Carmen Tinco',
+    name: 'CamilaTinco',
     linkedin: 'https://www.linkedin.com/in/maricarmenrojastinco/',
     job: 'Administrator',
     area: 'Agriculture and Livestock',

@@ -1,16 +1,16 @@
 import React from 'react';
-import { mentorsList } from '../../../utils';
+import { mentorsList } from '../../../Mentoring/utils';
 
 function MentorItem(mentorData) {
   return(
     <li>
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">{ mentorData.name }</h5>
-          <h6 class="card-subtitle mb-2 text-muted">{ mentorData.job }</h6>
+      <div className="card">
+        <div className="card-body">
+          <h5 className="card-title">{ mentorData.name }</h5>
+          <h6 className="card-subtitle mb-2 text-muted">{ mentorData.job }</h6>
           <p>Skills you would like to advise: {mentorData.skills.join(', ')}</p>
           <div>
-            <button type="button" class="btn btn-success">Contact</button>
+            <button type="button" className="btn btn-success">Contact</button>
           </div>
         </div>
       </div>
@@ -18,7 +18,7 @@ function MentorItem(mentorData) {
   )
 }
 
-function MentorsList () {
+function MentorListPage () {
   return(
     <section className="d-flex justify-content-center flex-column m-4">
       <p className="text-center">
@@ -33,4 +33,4 @@ function MentorsList () {
   )
 }
 
-export default MentorsList;
+export default MentorListPage;

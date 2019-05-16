@@ -36,12 +36,12 @@ function EntrepreneurPage () {
           </select>
         </div>
       </form>
-      { data ? 
-        <ul>
+      { data
+        ? (<ul>
           { data.map(fintech => FintechItem(fintech)) }
-        </ul> 
-        : null }
-      
+        </ul>)
+        : null
+      }
     </section>
   )
 }

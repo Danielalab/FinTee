@@ -9,7 +9,9 @@ import ProjectsRoute from './Projects'
 import AccountRoute from './Account'
 import MentoringRoute from './Mentoring'
 import MentorRoute from './Mentor'
+import MentorListRoute from './MentorList'
 import MenteeRoute from './Mentee'
+import MenteeListRoute from './MenteeList'
 import FinancingRoute from './Financing'
 import EntrepreneurRoute from './Entrepreneur'
 import NotFoundRoute from './NotFound'
@@ -30,7 +32,9 @@ export default function createRoutes(store) {
           FinancingRoute,
           EntrepreneurRoute,
           MentorRoute,
-          MenteeRoute
+          MentorListRoute,
+          MenteeRoute,
+          MenteeListRoute
           /* Add More Routes Here */
         ].map((settings, index) => (
           <Route key={`Route-${index}`} {...settings} />

@@ -45,7 +45,7 @@ function MentorModal ({ classes, open , handleClose, next }) {
       >
         <div style={getModalStyle()} className={classes.paper}>
           <Typography variant="h6" id="modal-title">
-            Text in a modal
+            Code of conduct
           </Typography>
           <Typography variant="subtitle1" id="simple-modal-description">
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula.

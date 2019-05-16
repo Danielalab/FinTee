@@ -1,6 +1,9 @@
 import React from 'react';
 import { skillsMentoring, areas } from "../../../Mentoring/utils.js";
 import { countries } from 'countries-apec.js';
+import { Link } from 'react-router-dom';
+import { MENTORLIST_PATH } from '../../../../constants/paths'
+import Button from '@material-ui/core/Button'
 
 function MenteePage() {
   return(
@@ -58,7 +61,13 @@ function MenteePage() {
             }
           </div>
         </div>
-        <button type="button" className="btn btn-success btn-lg btn-block my-3">Find a Mentor</button>
+        <Button
+          type="button"
+          className="btn btn-success btn-lg btn-block my-3"
+          omponent={Link} to={MENTORLIST_PATH}
+        >
+          Find a Mentor
+        </Button>
       </form>
     </section>
   )
