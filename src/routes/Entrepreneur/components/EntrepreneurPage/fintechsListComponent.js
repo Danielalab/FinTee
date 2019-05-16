@@ -5,10 +5,12 @@ import { fintechsList } from 'routes/Financing/fintechs';
 function FintechItem(fintechData) {
   return(
     <div className="card">
-      <img src={ fintechData.img } className="card-img-top" alt={ fintechData.nameFintech } />
+      <img src={ fintechData.img } className="img-fluid min-heigth-img" alt={ fintechData.nameFintech } />
       <div className="card-body">
         <h5 className="card-title">{ fintechData.nameFintech }</h5>
-        <a href={ fintechData.webURL } className="btn btn-success">Ask for a loan</a>
+        <div className="text-center">
+          <a href={ fintechData.webURL } className="btn btn-success">Ask for a loan</a>
+        </div>
       </div>
     </div>
   )
@@ -37,7 +39,7 @@ class FintechsListComponent extends React.Component {
         <ul>
           { this.state.data.map(fintech => {
             return (
-              <li key={ fintech.id }>
+              <li className="my-2" key={ fintech.id }>
                 {FintechItem(fintech)}
               </li>
             )
