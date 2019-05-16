@@ -1,5 +1,8 @@
 import React from 'react';
 import img from '../../../../static/money.png'
+import { Link } from 'react-router-dom'
+import { ENTREPRENEUR_PATH } from '../../../../constants/paths'
+import Button from '@material-ui/core/Button'
 
 function FinancingPage() {
   return(
@@ -13,13 +16,24 @@ function FinancingPage() {
           <span className="title title-yellow"> + Fintechs</span>
         </h2>
         <p className="text-center">
-          FinTee allows women entrepreneurs to find more affordable 
+          FinTee allows women entrepreneurs to find more affordable
           financing options and online through lending fintechs.
         </p>
       </div>
       <div className="d-flex justify-content-center flex-column">
-        <button type="button" className="btn btn-success btn-lg btn-block">I'm a women entrepreneur</button>
-        <button type="button" className="btn btn-outline-success btn-lg btn-block">I'm a Fintech</button>
+        <Button
+          type="button"
+          className="btn btn-success btn-lg btn-block"
+          component={Link} to={ENTREPRENEUR_PATH}
+        >
+          I'm a women entrepreneur
+        </Button>
+        <button
+          type="button"
+          className="btn btn-outline-success btn-lg btn-block"
+        >
+          I'm a Fintech
+        </button>
       </div>
     </section>
   )

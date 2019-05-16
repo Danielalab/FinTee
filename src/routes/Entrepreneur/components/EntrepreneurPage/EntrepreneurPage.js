@@ -1,7 +1,7 @@
 import React from 'react';
 import { countries } from 'countries-apec';
 
-class FintechsList extends React.Component() {
+class EntrepreneurPage extends React.Component() {
   state = {
     error: null,
     data: undefined,
@@ -11,7 +11,7 @@ class FintechsList extends React.Component() {
     this.setState({ data: null, error: null });
 
     try {
-      let data = await fetch('../../../');
+      let data = await fetch('../../../../../fintech.json');
       data = data.filter(fintech => fintech.country === countryName)
       this.setState({ data: data });
     } catch (error) {
@@ -27,18 +27,18 @@ class FintechsList extends React.Component() {
     return(
       <section className="d-flex justify-content-center flex-column m-4">
         <p className="text-center">
-          Welcome, we will show you different fintechs in your country so you 
+          Welcome, we will show you different fintechs in your country so you
           can choose the one that best suits your needs.
         </p>
         <form className="form" name="formLogin" role="form">
           <div className="form-group">
-            <select onChange={(e) => { handleSelectCountry(e.target.value) }} id="country" className="form-control">
+            <select onChange={(e) => { this.handleSelectCountry(e.target.value) }} id="country" className="form-control">
               <option selected >Select your country</option>
               { countries.map(country => <option key={country.id}  value={country.name}>{ country.name }</option>) }
             </select>
           </div>
         </form>
-        { data ? 'hola' : '' }
+        { this.state.data ? 'hola' : '' }
         <ul>
           <li>lista de fintechs</li>
         </ul>
@@ -47,4 +47,4 @@ class FintechsList extends React.Component() {
   }
 }
 
-export default FintechsList;
+export default EntrepreneurPage;
