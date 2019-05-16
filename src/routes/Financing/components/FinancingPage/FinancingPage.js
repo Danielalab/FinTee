@@ -1,7 +1,7 @@
 import React from 'react';
 import img from '../../../../static/money.png'
 import { Link } from 'react-router-dom'
-import { ENTREPRENEUR_PATH } from '../../../../constants/paths'
+import { ENTREPRENEUR_PATH, FINTECH_PATH } from '../../../../constants/paths'
 import Button from '@material-ui/core/Button'
 
 function FinancingPage() {
@@ -28,12 +28,13 @@ function FinancingPage() {
         >
           I'm a women entrepreneur
         </Button>
-        <button
+        <Button
           type="button"
           className="btn btn-outline-success btn-lg btn-block"
+          component={Link} to={FINTECH_PATH}
         >
           I'm a Fintech
-        </button>
+        </Button>
       </div>
     </section>
   )

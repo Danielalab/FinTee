@@ -27,7 +27,7 @@ function FintechPage () {
   return(
     <section className="d-flex justify-content-center flex-column m-4">
       <p className="text-center">
-        Welcome, we will show you different fintechs in your country so 
+        Welcome, we will show you different fintechs in your country so
         that you can choose the loan that best suits your needs.
       </p>
       <form className="form" name="formLogin" role="form">
@@ -38,12 +38,11 @@ function FintechPage () {
           </select>
         </div>
       </form>
-      { data ? 
+      { data ?
         <ul>
           { data.map(business => BusinessItem(business)) }
-        </ul> 
+        </ul>
         : null }
-      
     </section>
   )
 }
