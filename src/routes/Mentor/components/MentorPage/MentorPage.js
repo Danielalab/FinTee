@@ -1,5 +1,5 @@
 import React from 'react';
-import { skillsMentoring, areas} from '../utils.js'
+import { skillsMentoring, areas} from  '../../../Mentoring/utils.js';
 import { countries } from 'countries-apec.js';
 
 function MentorPage() {

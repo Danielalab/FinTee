@@ -1,5 +1,5 @@
 import React from 'react';
-import { mentorsList } from '../utils';
+import { mentorsList } from '../../../utils';
 
 function MentorItem(mentorData) {
   return(
@@ -13,7 +13,7 @@ function MentorItem(mentorData) {
             <button type="button" class="btn btn-success">Success</button>
           </div>
         </div>
-      </div> 
+      </div>
     </li>
   )
 }

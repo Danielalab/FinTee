@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Modal from '@material-ui/core/Modal';
 import { Link } from 'react-router-dom'
 import Button from '@material-ui/core/Button'
-// import { LOGIN_PATH, SIGNUP_PATH, FAQ_PATH, ABOUT_PATH } from 'constants/paths'
+import { MENTOR_NAME, MENTEE_NAME  } from 'constants/paths'
 
 
 function rand() {

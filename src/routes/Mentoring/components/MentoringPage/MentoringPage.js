@@ -47,14 +47,14 @@ class MentoringPage extends React.Component {
         <button
           type="button"
           className="btn btn-success btn-lg btn-block"
-          onClick={()=> {this.handleOpen('/login')}}
+          onClick={()=> {this.handleOpen('/mentor')}}
         >
           I'm a Mentor
         </button>
         <button
           type="button"
           className="btn btn-outline-success btn-lg btn-block"
-          onClick={()=> {this.handleOpen('/signup')}}
+          onClick={()=> {this.handleOpen('/mentee')}}
         >
           I'm a Mentee
         </button>
