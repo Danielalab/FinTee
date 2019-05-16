@@ -12,6 +12,11 @@ body {
   /* font-size: 2.8rem; */
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 .title {
   color: #A64D78;
   font-family: 'Righteous', cursive;
@@ -64,4 +69,8 @@ body {
 
 .logo {
   height: 33vh;
+}
+
+.min-heigth-img {
+  background-color: #ffffff;
 }

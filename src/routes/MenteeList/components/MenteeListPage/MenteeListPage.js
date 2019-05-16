@@ -3,7 +3,7 @@ import { menteesList } from '../../../Mentoring/utils';
 
 function MenteeItem(MenteeData) {
   return(
-    <li>
+    <li className="my-2">
       <div className="card">
         <div className="card-body">
           <h5 className="card-title">{ MenteeData.name }</h5>
