@@ -11,7 +11,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Typography from '@material-ui/core/Typography';
 import Chip from '@material-ui/core/Chip';
-import Button from '@material-ui/core/Button'
+import Button from '@material-ui/core/Button';
 
 
 const styles = (theme) => ({
@@ -89,7 +89,7 @@ function MenteeItem(MenteeData, classes) {
           </Button>
         </CardActions>
       </Card>
-      </ListItem>
+    </ListItem>
   )
 }
 
@@ -103,7 +103,7 @@ function MenteeListPage ({ classes }) {
       </p>
       <List className={classes.root}>
         { menteesList.map(Mentee => MenteeItem(Mentee, classes)) }
-        </List>
+      </List>
     </section>
   )
 }
