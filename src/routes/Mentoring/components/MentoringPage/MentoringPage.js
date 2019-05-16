@@ -1,6 +1,7 @@
 import React from 'react';
 import img from '../../../../static/networking.png';
 import { withStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button'
 
 import MentorModal from './MentorModal';
 // import { LOGIN_PATH, SIGNUP_PATH, FAQ_PATH, ABOUT_PATH } from 'constants/paths'
@@ -9,6 +10,13 @@ const styles = () => ({
   list: {
     width: 250,
   },
+  button: {
+    border: "3px solid #A64D78",
+    color: "#333",
+    margin: "3px",
+    fontWeight: 700,
+    cursor: 'pointer'
+  }
 });
 
 class MentoringPage extends React.Component {
@@ -26,7 +34,7 @@ class MentoringPage extends React.Component {
   };
 
   render() {
-    // const { classes } = this.props;
+    const { classes } = this.props;
 
   return(
     <section className="d-flex justify-content-center flex-column m-4">
@@ -44,20 +52,20 @@ class MentoringPage extends React.Component {
         </p>
       </div>
       <div className="d-flex justify-content-center flex-column">
-        <button
+        <Button
           type="button"
-          className="btn btn-success btn-lg btn-block"
+          className={classes.button}
           onClick={()=> {this.handleOpen('/mentor')}}
         >
           I'm a Mentor
-        </button>
-        <button
+        </Button>
+        <Button
           type="button"
-          className="btn btn-outline-success btn-lg btn-block"
+          className={classes.button}
           onClick={()=> {this.handleOpen('/mentee')}}
         >
           I'm a Mentee
-        </button>
+        </Button>
       </div>
       <MentorModal open={this.state.open} closeModal={this.handleClose}  next={this.state.next}/>
     </section>

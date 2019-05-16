@@ -4,9 +4,19 @@ import { countries } from 'countries-apec.js';
 import { Link } from 'react-router-dom';
 import { MENTEELIST_PATH } from '../../../../constants/paths'
 import Button from '@material-ui/core/Button'
+import { withStyles } from '@material-ui/core/styles';
 
+const styles = () => ({
+  button: {
+    border: "3px solid #A64D78",
+    color: "#333",
+    margin: "3px",
+    fontWeight: 700,
+    cursor: 'pointer'
+  }
+});
 
-function MentorPage() {
+function MentorPage({ classes }) {
   return(
     <section className="p-4">
       <h3 className="title">Mentor</h3>
@@ -64,7 +74,7 @@ function MentorPage() {
         </div>
         <Button
           type="button"
-          className="btn btn-success btn-lg btn-block my-3"
+          className={classes.button}
           component={Link} to={MENTEELIST_PATH}
         >
           Find a Mentee
@@ -74,4 +84,4 @@ function MentorPage() {
   )
 }
 
-export default MentorPage;
+export default withStyles(styles)(MentorPage);

@@ -9,14 +9,15 @@ import Button from '@material-ui/core/Button'
 
 const styles = () => ({
   button: {
-    backgroundColor: "#A64D78",
-    color: "#ffffff",
-    margin: "3px"
+    border: "3px solid #A64D78",
+    color: "#333",
+    margin: "3px",
+    fontWeight: 700,
+    cursor: 'pointer'
   }
 });
 
-function Home(props) {
-  const { classes } = props;
+function Home({ classes }) {
   return (
     <section className="d-flex justify-content-center flex-column m-4">
       <div className="d-flex justify-content-center flex-column mt-2 mb-3">
@@ -24,7 +25,7 @@ function Home(props) {
           <img src={logo} className="img-fluid logo rounded-circle" alt="women"></img>
         </figure>
         <p className="text-center">
-          It is a platform that allows women entrepreneurs (SMEs)
+          It is a platform that allows women entrepreneurs <strong>(SMEs) </strong>
           to connect with mentors from different fields to enhance their technical and soft skills,
           in addition to connecting them with fintechs from the region to access credit in
           a 100% digital experience.
