@@ -2,9 +2,22 @@ import React from 'react';
 import { countries } from 'countries-apec';
 import { fintechsList } from 'routes/Financing/fintechs';
 
+function FintechItem(fintechData) {
+  return(
+    <div class="card" style="width: 18rem;">
+      <img src={ fintechData.img } class="card-img-top" alt={ fintechData.nameFintech } />
+      <div class="card-body">
+        <h5 class="card-title">{ fintechData.nameFintech }</h5>
+        <a href={ fintechData.webURL } class="btn btn-success">Ask for a loan</a>
+      </div>
+    </div>
+  )
+}
+
 function EntrepreneurPage () {
-  let data = fintechsList;
+  let data = [];
   const handleSelectCountry = (countryName) => {
+    data = [];
     data = fintechsList.filter((fintech) => fintech.country === countryName)
     console.log(data);
   }
@@ -23,10 +36,12 @@ function EntrepreneurPage () {
           </select>
         </div>
       </form>
-      { data ? 'hola' : '' }
-      <ul>
-        <li>lista de fintechs</li>
-      </ul>
+      { data ? 
+        <ul>
+          { data.map(fintech => FintechItem(fintech)) }
+        </ul> 
+        : null }
+      
     </section>
   )
 }

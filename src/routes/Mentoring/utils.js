@@ -114,3 +114,22 @@ export const mentorsList = [
     id: 2,
   }
 ]
+
+export const menteesList = [
+  {
+    name: 'Carmen Tinco',
+    linkedin: 'https://www.linkedin.com/in/maricarmenrojastinco/',
+    job: 'Administrator',
+    area: 'Agriculture and Livestock',
+    skills: ['Administration', 'Accounting and Finance', 'Financial planning'],
+    id: 1,
+  },
+  {
+    name: 'Alexandra Bejar',
+    linkedin: 'https://www.linkedin.com/in/danielagonzalesbejar/',
+    job: 'Accountant',
+    area: 'Agriculture and Livestock',
+    skills: ['Sales', 'Accounting and Finance', 'Financial planning'],
+    id: 2,
+  }
+]
