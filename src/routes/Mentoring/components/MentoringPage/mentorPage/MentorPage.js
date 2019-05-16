@@ -31,6 +31,10 @@ function MentorPage() {
             placeholder="Linkedin URL"/>
         </div>
         <div className="form-group">
+          <input className="form-control" id="job-mentor" name="job-mentor" type="text"
+            placeholder="Job"/>
+        </div>
+        <div className="form-group">
           <input className="form-control" id="business-name" name="company-name" type="text"
             placeholder="Company Name"/>
         </div>
