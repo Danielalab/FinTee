@@ -19,7 +19,6 @@ function MenteeItem(MenteeData) {
 }
 
 function MenteeListPage () {
-  console.log(menteesList)
   return(
     <section className="d-flex justify-content-center flex-column m-4">
       <p className="text-center">
