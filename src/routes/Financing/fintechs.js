@@ -99,3 +99,30 @@ export const fintechsList = [
     "id": 14
   }
 ]
+
+export const businessList = [
+  {
+    "name": "Cusi",
+    "img": "http://perupymes.com/pymes/img/94e792_rgYYLPwf_400x400.jpeg",
+    "country": "Peru",
+    "amount": 1500,
+    "linkedin": "https://www.linkedin.com/in/danielagonzalesbejar/",
+    "id": 1
+  },
+  {
+    "name": "Simones Catering",
+    "img": "http://perupymes.com/pymes/img/b7c9eb_Logo SIMONES_2018.png",
+    "country": "Peru",
+    "amount": 2000,
+    "linkedin": "https://www.linkedin.com/in/maricarmenrojastinco/",
+    "id": 2
+  },
+  {
+    "name": "Allpachu Alpaca",
+    "img": "http://perupymes.com/pymes/img/4319b0_FB_IMG_14770054110914665.jpg",
+    "country": "Peru",
+    "amount": 1000,
+    "linkedin": "https://www.linkedin.com/in/maricarmenrojastinco/",
+    "id": 3
+  }
+]
