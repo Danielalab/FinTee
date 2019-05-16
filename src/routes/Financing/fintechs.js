@@ -1,4 +1,4 @@
-[
+export const fintechsList = [
   {
     "nameFintech": "SOLVEN",
     "webURL": "https://www.solven.pe/",
