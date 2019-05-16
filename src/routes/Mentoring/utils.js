@@ -104,6 +104,8 @@ export const mentorsList = [
     area: 'Agriculture and Livestock',
     skills: ['Administration', 'Accounting and Finance', 'Financial planning'],
     id: 1,
+    summary: 'About the business',
+    image: 'https://user-images.githubusercontent.com/25912510/57843543-7602a880-779c-11e9-8315-1cb80e88fec0.jpeg'
   },
   {
     name: 'Alexandra Bejar',
@@ -112,6 +114,8 @@ export const mentorsList = [
     area: 'Agriculture and Livestock',
     skills: ['Sales', 'Accounting and Finance', 'Financial planning'],
     id: 2,
+    summary: 'About the business',
+    image: 'https://user-images.githubusercontent.com/25912510/57843541-7602a880-779c-11e9-9d20-7ca6559e23e2.jpg'
   }
 ]
 
@@ -123,6 +127,8 @@ export const menteesList = [
     area: 'Agriculture and Livestock',
     skills: ['Administration', 'Accounting and Finance', 'Financial planning'],
     id: 1,
+    summary: 'About the business',
+    image: 'https://user-images.githubusercontent.com/25912510/57839788-561bb680-7795-11e9-8a0a-0cdc4ee374f6.jpg'
   },
   {
     name: 'Alexandra Bejar',
@@ -131,5 +137,7 @@ export const menteesList = [
     area: 'Agriculture and Livestock',
     skills: ['Sales', 'Accounting and Finance', 'Financial planning'],
     id: 2,
+    summary: 'About the business',
+    image: 'https://user-images.githubusercontent.com/25912510/57839786-55832000-7795-11e9-9049-5a578bf273e0.jpeg '
   }
 ]
