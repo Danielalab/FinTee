@@ -26,12 +26,22 @@ function getModalStyle() {
 const styles = theme => ({
   paper: {
     position: 'absolute',
-    width: theme.spacing.unit * 50,
+    width: theme.spacing.unit * 40,
     backgroundColor: theme.palette.background.paper,
     boxShadow: theme.shadows[5],
     padding: theme.spacing.unit * 4,
     outline: 'none',
   },
+  button: {
+    backgroundColor: "#A64D78",
+    color: "#ffffff",
+    margin: "3px",
+    width: '100%'
+  },
+  title: {
+    color: '#f1c131',
+    fontFfamily: 'Righteous'
+  }
 });
 
 function MentorModal ({ classes, open , handleClose, next }) {
@@ -44,18 +54,20 @@ function MentorModal ({ classes, open , handleClose, next }) {
         onClose={handleClose}
       >
         <div style={getModalStyle()} className={classes.paper}>
-          <Typography variant="h6" id="modal-title">
-            Text in a modal
+          <Typography variant="h6" id="modal-title" className={classes.title}>
+            Code of conduct
           </Typography>
           <Typography variant="subtitle1" id="simple-modal-description">
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+          - Detail your profile. <br></br>
+          - Be consistent and follow up. <br></br>
+          - Be responsible with the availability of others
           </Typography>
           <Button
             type="button"
-            className="btn btn-success btn-lg btn-block"
+            className={classes.button}
             component={Link} to={next}
           >
-            Aceptar
+            I agree 
           </Button>
           <MentorModalWrapped />
         </div>
