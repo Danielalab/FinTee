@@ -1,5 +1,5 @@
 import React from 'react';
-import { mentorsList } from '../utils';
+import { mentorsList } from '../MentoringPage/utils';
 
 function MentorItem(mentorData) {
   return(
@@ -10,7 +10,7 @@ function MentorItem(mentorData) {
           <h6 class="card-subtitle mb-2 text-muted">{ mentorData.job }</h6>
           <p>Skills you would like to advise: {mentorData.skills.join(', ')}</p>
           <div>
-            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-success">Contact</button>
           </div>
         </div>
       </div> 
