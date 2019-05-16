@@ -1,7 +1,8 @@
 import React from 'react';
 import img from '../../../../static/networking.png';
 import { withStyles } from '@material-ui/core/styles';
-import { Link } from 'react-router-dom';
+
+import MentorModal from './MentorModal';
 // import { LOGIN_PATH, SIGNUP_PATH, FAQ_PATH, ABOUT_PATH } from 'constants/paths'
 
 const styles = () => ({
@@ -10,7 +11,23 @@ const styles = () => ({
   },
 });
 
-function MentoringPage() {
+class MentoringPage extends React.Component {
+  state = {
+    open: false,
+    next: null,
+  };
+
+  handleOpen = (next) => {
+    this.setState({ open: true , next });
+  };
+
+  handleClose = () => {
+    this.setState({ open: false, next: null });
+  };
+
+  render() {
+    // const { classes } = this.props;
+
   return(
     <section className="d-flex justify-content-center flex-column m-4">
       <div className="d-flex justify-content-center flex-column mt-2 mb-3">
@@ -30,22 +47,21 @@ function MentoringPage() {
         <button
           type="button"
           className="btn btn-success btn-lg btn-block"
-          // onSubmit={goToMentor}
-          // component={Link} to={MENTOR_PATH}
+          onClick={()=> {this.handleOpen('/login')}}
         >
           I'm a Mentor
         </button>
         <button
           type="button"
           className="btn btn-outline-success btn-lg btn-block"
-          // onSubmit={goToMentee}
-          // component={Link} to={MENTEE_PATH}
+          onClick={()=> {this.handleOpen('/signup')}}
         >
           I'm a Mentee
         </button>
       </div>
+      <MentorModal open={this.state.open} closeModal={this.handleClose}  next={this.state.next}/>
     </section>
-  )
+  )}
 }
 
 export default withStyles(styles)(MentoringPage);

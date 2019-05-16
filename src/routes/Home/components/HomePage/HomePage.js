@@ -1,13 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {
-  ACCOUNT_PATH,
-  LIST_PATH,
-  LOGIN_PATH,
-  SIGNUP_PATH
-} from 'constants/paths'
-
+  FINANCING_PATH, MENTORING_PATH
+} from '../../../../constants/paths'
 import logo from '../../../../static/logo.png'
+import Button from '@material-ui/core/Button'
 
 function Home() {
   return (
@@ -24,8 +21,20 @@ function Home() {
         </p>
       </div>
       <div className="d-flex justify-content-center flex-column">
-        <button type="button" className="btn btn-next btn-lg btn-block">Mentoring</button>
-        <button type="button" className="btn btn-next btn-lg btn-block">Financing</button>
+        <Button
+          type="button"
+          className="btn btn-next btn-lg btn-block"
+          component={Link} to={MENTORING_PATH}
+        >
+          Mentoring
+        </Button>
+        <Button
+          type="button"
+          className="btn btn-next btn-lg btn-block"
+          component={Link} to={FINANCING_PATH}
+        >
+          Financing
+        </Button>
       </div>
     </section>
   )

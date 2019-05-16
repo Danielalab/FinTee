@@ -2,9 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import { Link } from 'react-router-dom'
-import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -13,7 +11,7 @@ import MoneyIcon from '@material-ui/icons/AttachMoney';
 import MenuIcon from '@material-ui/icons/Menu';
 import PersonIcon from '@material-ui/icons/Person';
 import IconButton from '@material-ui/core/IconButton';
-import { FINANCING_PATH, MENTORING_PATH, LOGIN_PATH, SIGNUP_PATH, FAQ_PATH, ABOUT_PATH } from 'constants/paths'
+import { FINANCING_PATH, MENTORING_PATH, LOGIN_PATH } from 'constants/paths'
 
 
 const styles = () => ({
@@ -52,10 +50,6 @@ function SwipeableTemporaryDrawer() {
           <ListItemIcon><MoneyIcon /></ListItemIcon>
           <ListItemText primary='Financing' />
         </ListItem>
-        {/* <ListItem button component={Link} to={FAQ_PATH}>
-          <ListItemIcon><QuestionIcon /></ListItemIcon>
-          <ListItemText primary='Login' />
-        </ListItem> */}
         <ListItem button component={Link} to={LOGIN_PATH}>
           <ListItemIcon>
             <PersonIcon />
@@ -73,7 +67,7 @@ function SwipeableTemporaryDrawer() {
         aria-label="open drawer"
         onClick={toggleDrawer('left', true)}
       >
-        <MenuIcon style={{color: 'fff'}}/>
+        <MenuIcon style={{color: 'fff'}} />
       </IconButton>
       <SwipeableDrawer
         open={state.left}

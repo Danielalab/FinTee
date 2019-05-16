@@ -18,27 +18,11 @@ const avatarStyles = {
   }
 }
 
-// export const AccountDropdown = ({ avatarUrl, displayName }) => (
-//   <IconButton style={avatarStyles.button} disableTouchRipple>
-//     <div className={classes.avatar}>
-//       <div className="hidden-mobile">
-//         <Avatar src={avatarUrl || defaultUserImage} />
-//       </div>
-//       <div className={classes['avatar-text']}>
-//         <span className={`${classes['avatar-text-name']} hidden-mobile`}>
-//           {displayName || 'User'}
-//         </span>
-//         <DownArrow color="white" />
-//       </div>
-//     </div>
-//   </IconButton>
-// )
 
 class AccountDropdown extends Component {
   render() {
     const { avatarUrl, displayName } = this.props
     return (
-      // <IconButton style={avatarStyles.button} disableTouchRipple>
       <div className={classes.avatar}>
         <div className="hidden-mobile">
           <Avatar src={avatarUrl || defaultUserImage} />
@@ -50,7 +34,6 @@ class AccountDropdown extends Component {
           <DownArrow color="white" />
         </div>
       </div>
-      // </IconButton>
     )
   }
 }

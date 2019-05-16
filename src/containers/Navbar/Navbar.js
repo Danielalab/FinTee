@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
-import MenuIcon from '@material-ui/icons/Menu';
-import IconButton from '@material-ui/core/IconButton';
 import { LIST_PATH } from 'constants/paths'
 import AccountMenu from './AccountMenu'
 import LoginMenu from './LoginMenu'
@@ -20,7 +18,6 @@ function Navbar({
   closeAccountMenu,
   anchorEl,
   handleMenu,
-  classes
 }) {
   return (
     <AppBar position="static">
@@ -29,7 +26,6 @@ function Navbar({
           <SwipeableTemporaryDrawer />
         </div>
         <Typography
-          variant="title"
           className="title-logo"
           component={Link}
           to={authExists ? LIST_PATH : '/'}>
